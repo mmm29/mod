@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="36.0" layoutY="76.0" mnemonicParsing="false" onAction="#onSearchAction" text="Search" />
+      <TextField fx:id="productNameField" layoutX="36.0" layoutY="35.0" promptText="Name" />
+      <TextField fx:id="addProductNameField" layoutX="226.0" layoutY="35.0" promptText="Name" />
+      <TextField fx:id="addProductPriceField" layoutX="227.0" layoutY="76.0" promptText="Price" />
+      <Text fx:id="searchProductMessage" layoutX="36.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" wrappingWidth="149.5999999999999" />
+      <Text fx:id="addProductMessage" layoutX="227.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.5999999999999" />
+      <Button layoutX="227.0" layoutY="116.0" mnemonicParsing="false" onAction="#onAddProductAction" prefHeight="26.0" prefWidth="83.0" text="Add product" />
+      <TextField fx:id="removeProductField" layoutX="411.0" layoutY="35.0" promptText="Name" />
+      <Button layoutX="411.0" layoutY="76.0" mnemonicParsing="false" onAction="#onRemoveAction" text="Remove" />
+      <Text fx:id="removeProductMessage" layoutX="411.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.5999999999999" />
+      <ListView fx:id="productsList" layoutX="36.0" layoutY="178.0" prefHeight="200.0" prefWidth="191.0" />
+      <VBox fx:id="productInfoPane" layoutX="250.0" layoutY="178.0" prefHeight="200.0" prefWidth="330.0">
+         <children>
+            <HBox prefHeight="7.0" prefWidth="330.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="37.33673095703125" />
+                  <Text fx:id="productInfoNameText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="182.3999571800232" />
+               </children>
+            </HBox>
+            <HBox prefHeight="7.0" prefWidth="330.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="37.33673095703125" />
+                  <Text fx:id="productInfoPriceText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="182.3999571800232" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
